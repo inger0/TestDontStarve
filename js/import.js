@@ -7,5 +7,5 @@ $(document).ready(function ($) {
         // Footer引用
         $('#footer').empty();
         $('#footer').load('module-footer.html');
-    });it
+    });
 });
