@@ -10,7 +10,11 @@ function getTitle() {
         data = [
             "About Don't Starve",
             "About LOL",
-            "About Test"
+            "About Test",
+            "About AAA",
+            "About BBB",
+            "About CCC",
+            "About DDD",
         ];
         data.sort(function () {
             return (0.5 - Math.random());
