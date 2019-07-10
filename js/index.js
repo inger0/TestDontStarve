@@ -1,11 +1,11 @@
-$("#index-title").html(getTitle());
 
+getTitle();
 function getTitle() {
     var storage = window.sessionStorage;
     var dataInCache = storage.getItem("indexTitle");//localStorage取数据
 
     if (dataInCache !== null) {	//localStorage有数据则直接渲染
-        return dataInCache;
+        $("#index-title").html(dataInCache);
     } else {
         $.getJSON("storage/index.json", function (data) {
             data.sort(function () {
@@ -13,7 +13,7 @@ function getTitle() {
             });
             storage.setItem("indexTitle", data[0]);//放入localStorage，名字为renderRoute。
 
-            return data[0];
+            $("#index-title").html(data[0]);
         })
     }
 }
